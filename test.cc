@@ -1,18 +1,20 @@
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 int main()
 {
-	int ival = 1024;
-	int &refVal = ival;
-	
-	refVal += 2;
-	int ii = refVal;
-	
-	cout << ival << endl << ii << endl << refVal << endl << &refVal << endl;
-	
-	enum meiju {aa, bb, cc, dd};
-	
-	cout << aa << bb << cc << dd << endl;
-	
-	return 0;
+ string word;
+ vector<string> text;
+ cout<<"请输入字符串并以stop结束！！！"<<endl;
+ while(cin>>word)
+ {
+  if(word=="stop")
+   break;
+  text.push_back (word);
+ }
+ cout<<"运行结果为："<<endl;
+ for(int i=0;i<text.size ();i++)
+  cout<<text[i]<<endl;
+ return 0;
 }
